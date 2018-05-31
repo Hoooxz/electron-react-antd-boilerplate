@@ -10,7 +10,7 @@
     "react-scripts": "1.1.4"
   },
   "homepage": "./",
-  "main": "src/electron-starter.js",
+  "main": "public/electron.js",
   "scripts": {
     "start": "nf start -p 4000",
     "build": "react-app-rewired build",
@@ -24,9 +24,9 @@
     "postinstall": "install-app-deps"
   },
   "build": {
-    "appId": "com.electron.electron-with-create-react-app",
+    "appId": "me.hoxz.electron-with-create-react-app",
     "win": {
-      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+      "target":["nsis"]
     },
     "directories": {
       "buildResources": "public"
