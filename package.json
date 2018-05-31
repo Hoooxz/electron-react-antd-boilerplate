@@ -1,0 +1,42 @@
+{
+  "name": "electron-with-react-boilerplate",
+  "description": "a electron app boilerplate which use React.js and Ant Design",
+  "author": "Hoxz",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "homepage": "./",
+  "main": "src/electron-starter.js",
+  "scripts": {
+    "start": "nf start -p 4000",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-start": "node src/electron-wait-react",
+    "react-start": "react-app-rewired start",
+    "pack": "build --dir",
+    "dist": "npm run build && build",
+    "postinstall": "install-app-deps"
+  },
+  "build": {
+    "appId": "com.electron.electron-with-create-react-app",
+    "win": {
+      "iconUrl": "https://cdn2.iconfinder.com/data/icons/designer-skills/128/react-256.png"
+    },
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "devDependencies": {
+    "antd": "^3.5.4",
+    "babel-plugin-import": "^1.7.0",
+    "electron": "^2.0.2",
+    "electron-builder": "^20.15.1",
+    "react-app-rewired": "^1.5.2"
+  }
+}
