@@ -16,6 +16,9 @@ const tryConnection = () => client.connect({port: port}, () => {
             childProcess.stdout.on('data', function (data) {
                 console.log(data);  // console.log anything that the electron child process console.logs
             });
+            childProcess.stderr.on('data', function (data) {
+                console.log(data);  // console.error anything that the electron child process console.errors
+            });
         }
     }
 );
